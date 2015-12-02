@@ -1,2 +1,2 @@
-# config.fish
-Configuration for fishshell
+# Dotfiles
+Configuration files for stuff
