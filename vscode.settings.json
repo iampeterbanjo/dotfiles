@@ -1,0 +1,12 @@
+// Place your settings in this file to overwrite the default settings
+{
+	"editor.renderWhitespace": true,
+	
+	"editor.fontSize": 16,
+	
+	"editor.fontFamily": "Fira Code",
+	
+	"editor.wrappingColumn": 0,
+	
+	"editor.tabSize": "2"
+}
