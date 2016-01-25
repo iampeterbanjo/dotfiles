@@ -25,6 +25,10 @@ alias gits              'git status'
 alias gitch             'git checkout'
 alias gitcob            'git checkout -br'
 alias gitpush           'git push -u --all'
+alias gitco-ghpages     'git checkout -b gh-pages'
+alias gitpush-ghpages   'git push origin gh-pages'
+alias gitsync-ghpages   'git checkout gh-pages ; git merge master ; git checkout master ;git git push --all'
+
 
 #
 # VAGRANT
