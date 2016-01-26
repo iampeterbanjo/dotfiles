@@ -19,6 +19,7 @@ alias reloadfishconfig  'source ~/.config/fish/config.fish'
 #
 
 alias bsync             'browser-sync start --server . --xip --files="**/*.css, **/*.js, **/*.js" --directory'
+alias pbcopy-ssh        'pbcopy < ~/.ssh/id_rsa.pub'
 
 #
 # GIT
