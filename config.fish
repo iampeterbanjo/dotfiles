@@ -15,6 +15,12 @@ alias showfishconfig    'cat ~/.config/fish/config.fish'
 alias reloadfishconfig  'source ~/.config/fish/config.fish'
 
 #
+# DEVELOPMENT
+#
+
+alias bsync             'browser-sync start --server . --xip --files="**/*.css, **/*.js, **/*.js" --directory'
+
+#
 # GIT
 #
 
