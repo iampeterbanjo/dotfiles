@@ -10,7 +10,7 @@ alias code              'open -n -b "com.microsoft.VSCode"'
 # MAINTENANCE
 #
 
-
+alias sudo              'sudo '
 alias aliases           'cat ~/.config/fish/config.fish'
 alias editfishconfig    'vim ~/.config/fish/config.fish'
 alias showfishconfig    'cat ~/.config/fish/config.fish'
