@@ -21,8 +21,9 @@ alias edithostfile      'sudo mvim /etc/hosts'
 # DEVELOPMENT
 #
 
-alias bsync             'browser-sync start --server . --xip --files="**/*.css, **/*.js, **/*.js" --directory'
+alias bsync             'browser-sync start --server . --xip --files="**/*.css, **/*.js, **/*.html" --directory'
 alias pbcopy-ssh        'pbcopy < ~/.ssh/id_rsa.pub'
+alias testem-proxy      'browser-sync start --proxy localhost:7357 --xip --no-open --port 4000'
 
 #
 # GIT
