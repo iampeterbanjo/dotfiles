@@ -53,6 +53,12 @@ alias vr                'vagrant reload'
 alias vbu               'vagrant box update'
 
 #
+# OTHER
+#
+
+alias tweet             'twit-cli tweet'
+
+#
 # DIRECTORIES
 #
 
