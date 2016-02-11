@@ -30,6 +30,7 @@ alias testem-proxy      'browser-sync start --proxy localhost:7357 --xip --no-op
 #
 
 alias ga                'git add -A'
+alias gac               'git add -A; git commit -am'
 alias gm                'git commit --amend -m'
 alias gc                'git commit -am'
 alias gitd              'git diff'
