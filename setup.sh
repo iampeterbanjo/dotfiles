@@ -23,7 +23,4 @@ git clone https://github.com/powerline/fonts.git
 cd fonts
 bash install.sh
 
-# ubuntu themes
-sudo add-apt-repository ppa:noobslab/themes
-sudo apt-get update
 
