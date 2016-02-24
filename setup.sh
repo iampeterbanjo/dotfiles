@@ -16,4 +16,5 @@ curl -sL get.fisherman.sh | fish
 fisher install bass
 alias nvm 		"bass source ~/.nvm/nvm.sh ';' nvm"
 nvm install stable
+npm install -g npm
 
