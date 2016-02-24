@@ -18,3 +18,12 @@ alias nvm 		"bass source ~/.nvm/nvm.sh ';' nvm"
 nvm install stable
 npm install -g npm
 
+# powerline fonts
+git clone https://github.com/powerline/fonts.git
+cd powerline
+bash install.sh
+
+# ubuntu themes
+sudo add-apt-repository ppa:noobslab/themes
+sudo apt-get update
+
