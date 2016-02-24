@@ -20,7 +20,7 @@ npm install -g npm
 
 # powerline fonts
 git clone https://github.com/powerline/fonts.git
-cd powerline
+cd fonts
 bash install.sh
 
 # ubuntu themes
