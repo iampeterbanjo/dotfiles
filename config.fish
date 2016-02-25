@@ -1,4 +1,13 @@
 #
+# EDITORS
+#
+
+alias editor		vim
+alias vim               mvim
+alias brackets          'open -a Brackets'
+alias code              'open -n -b "com.microsoft.VSCode"'
+
+#
 # SSH
 #
 
