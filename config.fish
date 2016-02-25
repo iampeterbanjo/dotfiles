@@ -1,4 +1,22 @@
 #
+# EDITORS
+#
+
+alias editor            gedit
+alias brackets          'open -a Brackets'
+alias code              'open -n -b "com.microsoft.VSCode"'
+
+#
+# SYSTEM
+#
+
+alias sudo              'sudo '
+alias ai		'sudo apt-get install'
+alias aar 		'sudo apt-add-repository'
+alias au 		'sudo apt-get update'
+alias arr 		'sudo apt-remove-repository'
+
+#
 # SSH
 #
 
