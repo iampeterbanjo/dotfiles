@@ -1,10 +1,10 @@
 #
-# EDITORS
+# SSH
 #
 
-alias vim               mvim
-alias brackets          'open -a Brackets'
-alias code              'open -n -b "com.microsoft.VSCode"'
+
+alias sshnewkey 	'ssh-keygen -t rsa -b 4096 -C' #email
+alias sshaddkey		'ssh-agent -s; ssh-add'
 
 #
 # MAINTENANCE
@@ -12,10 +12,10 @@ alias code              'open -n -b "com.microsoft.VSCode"'
 
 alias sudo              'sudo '
 alias aliases           'cat ~/.config/fish/config.fish'
-alias editfishconfig    'vim ~/.config/fish/config.fish'
+alias editfishconfig    'editor ~/.config/fish/config.fish'
 alias showfishconfig    'cat ~/.config/fish/config.fish'
 alias reloadfishconfig  'source ~/.config/fish/config.fish'
-alias edithostfile      'sudo mvim /etc/hosts'
+alias edithostfile      'sudo editor /etc/hosts'
 
 #
 # DEVELOPMENT
@@ -58,10 +58,4 @@ alias vbu               'vagrant box update'
 
 alias tweet             'twit-cli tweet'
 
-#
-# DIRECTORIES
-#
 
-alias cd-gosrc          'cd ~/Projects/golang/src'
-alias cd-Github         'cd ~/Documents/GitHub/'
-alias cd-homestead      'cd ~/Projects/homestead/'
