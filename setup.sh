@@ -28,3 +28,8 @@ bash install.sh
 sh <(curl https://j.mp/spf13-vim3 -L)
 
 
+# nautilus
+sudo apt-get install nautilus-open-terminal
+
+
+
