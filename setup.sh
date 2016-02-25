@@ -31,5 +31,9 @@ sh <(curl https://j.mp/spf13-vim3 -L)
 # nautilus
 sudo apt-get install nautilus-open-terminal
 
+# variables
+export PROJECTS=/media/iampeterbanjo/data/projects
+export GOPATH=$PROJECTS/lib/golang
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 
