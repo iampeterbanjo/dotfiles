@@ -4,6 +4,7 @@
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt-get update
 sudo apt-get install git
+sudo apt-get install git-extras
 
 ## fish shell
 sudo apt-add-repository ppa:fish-shell/release-2
@@ -22,5 +23,8 @@ npm install -g npm
 git clone https://github.com/powerline/fonts.git
 cd fonts
 bash install.sh
+
+# spf-13 vim
+sh <(curl https://j.mp/spf13-vim3 -L)
 
 
