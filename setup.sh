@@ -35,6 +35,7 @@ sudo apt-get install nautilus-open-terminal
 export PROJECTS=/media/iampeterbanjo/data/projects
 export GOPATH=$PROJECTS/lib/golang
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export FISHERMAN= ~/.local/share/fisherman
 
 # dvorak keyboard at login
 sudo gedit /etc/mdm/Init/Default
