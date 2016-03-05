@@ -12,10 +12,10 @@ alias sshaddkey		'ssh-agent -s; ssh-add'
 
 alias sudo              'sudo '
 alias aliases           'cat ~/.config/fish/config.fish'
-alias editfishconfig    'editor ~/.config/fish/config.fish'
-alias showfishconfig    'cat ~/.config/fish/config.fish'
-alias reloadfishconfig  'source ~/.config/fish/config.fish'
-alias edithostfile      'sudo editor /etc/hosts'
+alias efish             'editor ~/.config/fish/config.fish'
+alias sfish             'cat ~/.config/fish/config.fish'
+alias rfish             'source ~/.config/fish/config.fish'
+alias ehosts            'sudo editor /etc/hosts'
 
 #
 # DEVELOPMENT
