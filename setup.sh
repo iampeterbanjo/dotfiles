@@ -11,6 +11,9 @@ sudo apt-add-repository ppa:fish-shell/release-2
 sudo apt-get update
 sudo apt-get install fish
 
+# oh-my-fish
+curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
+
 # nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
 curl -sL get.fisherman.sh | fish
