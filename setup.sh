@@ -36,4 +36,7 @@ export PROJECTS=/media/iampeterbanjo/data/projects
 export GOPATH=$PROJECTS/lib/golang
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
-
+# dvorak keyboard at login
+sudo gedit /etc/mdm/Init/Default
+## before the last line `exit 0` add
+/usr/bin/setxkbmap dvorak
