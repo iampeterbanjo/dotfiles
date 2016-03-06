@@ -36,6 +36,7 @@ sudo apt-get install nautilus-open-terminal
 
 # variables
 export PROJECTS=/media/iampeterbanjo/data/projects
+export GOROOT=$HOME/go
 export GOPATH=$PROJECTS/lib/golang
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 export FISHERMAN= ~/.local/share/fisherman
