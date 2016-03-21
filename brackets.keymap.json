@@ -5,8 +5,8 @@
         , "Alt-Down":       "edit.lineDown"
         , "Cmd-Opt-\\":     "cmd.splitViewNone"
         , "Cmd-\\":         "cmd.splitViewVertical"
-        , "Cmd-Tab":        "navigate.nextDoc"
-        , "Cmd-Opt-Tab":    "navigate.prevDoc"
+        , "Ctrl-Tab":        "navigate.nextDoc"
+        , "Ctrl-Opt-Tab":    "navigate.prevDoc"
         , "Cmd-P":          "navigate.quickOpen"
     }
 }
