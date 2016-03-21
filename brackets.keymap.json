@@ -1,0 +1,12 @@
+{
+    "documentation": "https://github.com/adobe/brackets/wiki/User-Key-Bindings",
+    "overrides": {
+        "Alt-Up":           "edit.lineUp"
+        , "Alt-Down":       "edit.lineDown"
+        , "Cmd-Opt-\\":     "cmd.splitViewNone"
+        , "Cmd-\\":         "cmd.splitViewVertical"
+        , "Cmd-Tab":        "navigate.nextDoc"
+        , "Cmd-Opt-Tab":    "navigate.prevDoc"
+        , "Cmd-P":          "navigate.quickOpen"
+    }
+}
