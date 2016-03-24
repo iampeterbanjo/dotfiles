@@ -45,3 +45,6 @@ export FISHERMAN= ~/.local/share/fisherman
 sudo gedit /etc/mdm/Init/Default
 ## before the last line `exit 0` add
 /usr/bin/setxkbmap dvorak
+
+# Resolve ENOSPC errors (lite-server, concurrently)
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
