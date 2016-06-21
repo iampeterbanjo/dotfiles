@@ -26,6 +26,7 @@ npm install -g npm
 git clone https://github.com/powerline/fonts.git
 cd fonts
 bash install.sh
+# then change terminal font to a Powerline font
 
 # spf-13 vim
 sh <(curl https://j.mp/spf13-vim3 -L)
