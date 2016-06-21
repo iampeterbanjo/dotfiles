@@ -41,6 +41,10 @@ export GOPATH=$PROJECTS/lib/golang
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 export FISHERMAN= ~/.local/share/fisherman
 
+# Go Google App Engine SDK
+export GAE_GO=$PROJECTS/lib/go_appengine
+export PATH=$GAE_GO:$PATH
+
 # dvorak keyboard at login
 sudo gedit /etc/mdm/Init/Default
 ## before the last line `exit 0` add
