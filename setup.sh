@@ -17,6 +17,19 @@ sudo apt-get install fish
 
 # nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
+
+# ~/.profile
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+nvm use stable
+
+# config.fish
+set -U NODE_PATH (which node)
+set -U NPM_PATH (which npm)
+set -U fish_user_paths
+
+# fish setup
 curl -sL get.fisherman.sh | fish
 fisher install bass
 alias nvm 		"bass source ~/.nvm/nvm.sh ';' nvm"
