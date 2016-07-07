@@ -2,7 +2,10 @@ AutoFileName.sublime-package
 BracketHighlighter.sublime-package
 Color Highlighter.sublime-package
 Colorsublime.sublime-package
+DocBlockr.sublime-package
 Emmet.sublime-package
+Enhanced Clojure.sublime-package
+FileDiffs.sublime-package
 GitGutter.sublime-package
 JavaScriptNext - ES6 Syntax.sublime-package
 Origami.sublime-package
@@ -10,3 +13,5 @@ Package Control.sublime-package
 Sass.sublime-package
 SublimeLinter-annotations.sublime-package
 SublimeLinter-contrib-htmllint.sublime-package
+Theme - Spacegray.sublime-package
+TrailingSpaces.sublime-package
