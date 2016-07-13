@@ -4,7 +4,8 @@
 	"caret_extra_top": 2,
 	"caret_extra_width": 2,
 	"caret_style": "solid",
-	"color_scheme": "Packages/User/SublimeLinter/DarkRoomContrast (SL).tmTheme",
+	// "color_scheme": "Packages/User/SublimeLinter/base16-ocean.dark (SL).tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"font_face": "Fira Code",
 	"font_size": 16,
 	"highlight_line": true,
@@ -26,6 +27,9 @@
 	"match_brackets_content": true,
 	"match_brackets_square": true,
 	"tab_size": 2,
+	// "theme": "Spacegray-Theme.sublime-theme",
+	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
+	"word_wrap": true,
 	"wide_caret": true
 }
