@@ -29,7 +29,7 @@
 	"tab_size": 2,
 	// "theme": "Spacegray-Theme.sublime-theme",
 	"theme": "Material-Theme.sublime-theme",
-	"translate_tabs_to_spaces": true,
+	"translate_tabs_to_spaces": false,
 	"word_wrap": true,
 	"wide_caret": true
 }
