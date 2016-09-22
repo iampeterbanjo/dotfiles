@@ -9,8 +9,6 @@
 		"ApacheConf.tmLanguage",
 		"AutoFileName",
 		"Boxy Theme",
-		"BracketHighlighter",
-		"Color Highlighter",
 		"Colorsublime",
 		"Column Select",
 		"DocBlockr",
@@ -46,7 +44,6 @@
 		"Theme - Spacegray",
 		"Theme - Spacezero",
 		"Themes Menu Switcher",
-		"TrailingSpaces",
 		"WakaTime"
 	]
 }
