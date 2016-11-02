@@ -1,17 +1,26 @@
 {
+	"afn_use_keybinding": false,
+	"auto_complete_commit_on_tab": true,
+	"auto_complete_with_fields": true,
 	"bold_folder_labels": true,
 	"caret_extra_bottom": 2,
 	"caret_extra_top": 2,
 	"caret_extra_width": 2,
 	"caret_style": "solid",
-	// "color_scheme": "Packages/User/SublimeLinter/base16-ocean.dark (SL).tmTheme",
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Seti Monokai (SL).tmTheme",
+	"disable_tab_abbreviations_for_scopes": "source.css",
+	"find_selected_text": true,
 	"font_face": "Fira Code",
 	"font_size": 16,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
+	"hot_exit": false,
 	"ignored_packages":
 	[
+		"BracketHighlighter",
+		"Color Highlighter",
+		"CSS",
+		"TrailingSpaces",
 		"Vintage"
 	],
 	"indent_guide_options":
@@ -26,10 +35,27 @@
 	"match_brackets_braces": true,
 	"match_brackets_content": true,
 	"match_brackets_square": true,
+	"remember_open_files": false,
+	"rulers":
+	[
+		80,
+		120
+	],
+	"show_css_completions": false,
 	"tab_size": 2,
-	// "theme": "Spacegray-Theme.sublime-theme",
-	"theme": "Material-Theme.sublime-theme",
+	"theme": "Boxy Tomorrow.sublime-theme",
+	"theme_accent_pink": true,
+	"theme_find_panel_font_md": true,
+	"theme_icons_materialized": true,
+	"theme_scrollbar_line": true,
+	"theme_sidebar_folder_arrow": true,
+	"theme_size_xs": true,
+	"theme_statusbar_size_lg": true,
+	"theme_tab_font_xs": true,
+	"theme_tab_selected_underlined": true,
+	"theme_tab_width_auto": true,
+	"theme_unified": true,
 	"translate_tabs_to_spaces": false,
-	"word_wrap": true,
-	"wide_caret": true
+	"wide_caret": true,
+	"word_wrap": true
 }
