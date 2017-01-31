@@ -16,13 +16,24 @@ sudo apt-get install fish
 # omf no longer maintained
 
 # nvm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
+# curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
 
 # ~/.profile
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
-nvm use stable
+# nvm use stable
+# use asdf instead
+
+# asdf install
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.2.1
+
+# For Ubuntu or other linux distros
+echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
+
+echo 'source ~/.asdf/asdf.fish' >> ~/.config/fish/config.fish
+mkdir -p ~/.config/fish/completions; and cp ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 
 # config.fish
 set -U NODE_PATH (which node)
