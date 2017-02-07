@@ -31,6 +31,15 @@
 		"_build/**"
 	],
 	"find_selected_text": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"_build",
+		"node_modules"
+	],
 	"font_face": "Fira Code",
 	"font_size": 14,
 	"highlight_line": true,
