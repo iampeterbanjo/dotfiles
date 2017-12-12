@@ -11,41 +11,44 @@ sudo apt-add-repository ppa:fish-shell/release-2
 sudo apt-get update
 sudo apt-get install fish
 
-# oh-my-fish
-# curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
-# omf no longer maintained
+## firefox nightly
+sudo add-apt-repository ppa:ubuntu-mozilla-daily/ppa
+sudo apt-get update
+sudo apt-get install firefox-trunk
 
-# nvm
-# curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
-
-# ~/.profile
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-
-# nvm use stable
-# use asdf instead
-
-# asdf install
+### asdf install - for dev software package management
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.2.1
 
-# For Ubuntu or other linux distros
+#### For Ubuntu or other linux distros
 echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
 echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 
 echo 'source ~/.asdf/asdf.fish' >> ~/.config/fish/config.fish
 mkdir -p ~/.config/fish/completions; and cp ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 
+#### asdf mongodb 
+asdf plugin-add mongodb https://github.com/sylph01/asdf-mongodb.git
+
+### asdf nodejs
+# Imports Node.js release team's OpenPGP keys to main keyring
+bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+
+
 # config.fish
 set -U NODE_PATH (which node)
 set -U NPM_PATH (which npm)
 set -U fish_user_paths
 
+# thefuck
+sudo apt update
+sudo apt install python3-dev python3-pip
+sudo pip3 install thefuck
+pip install thefuck
+echo 'eval $(thefuck --alias)' >> .bashrc
+
 # fish setup
-curl -sL get.fisherman.sh | fish
-fisher install bass
-alias nvm 		"bass source ~/.nvm/nvm.sh ';' nvm"
-nvm install stable
-npm install -g npm
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+fisher install bass z fzf thefuck
 
 # powerline fonts
 git clone https://github.com/powerline/fonts.git
@@ -53,11 +56,7 @@ cd fonts
 bash install.sh
 # then change terminal font to a Powerline font
 
-# spf-13 vim
-sh <(curl https://j.mp/spf13-vim3 -L)
-
-
-# nautilus
+# nautilus - add open terminal here
 sudo apt-get install nautilus-open-terminal
 
 # variables
