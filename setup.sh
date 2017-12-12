@@ -17,7 +17,7 @@ sudo apt-get update
 sudo apt-get install firefox-trunk
 
 ### asdf install - for dev software package management
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.2.1
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.4.0
 
 #### For Ubuntu or other linux distros
 echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
@@ -33,12 +33,6 @@ asdf plugin-add mongodb https://github.com/sylph01/asdf-mongodb.git
 # Imports Node.js release team's OpenPGP keys to main keyring
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 
-
-# config.fish
-set -U NODE_PATH (which node)
-set -U NPM_PATH (which npm)
-set -U fish_user_paths
-
 # thefuck
 sudo apt update
 sudo apt install python3-dev python3-pip
@@ -46,9 +40,9 @@ sudo pip3 install thefuck
 pip install thefuck
 echo 'eval $(thefuck --alias)' >> .bashrc
 
-# fish setup
+# fisherman
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
-fisher install bass z fzf thefuck
+fisher install z fzf
 
 # powerline fonts
 git clone https://github.com/powerline/fonts.git
