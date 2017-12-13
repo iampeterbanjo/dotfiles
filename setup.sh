@@ -40,6 +40,9 @@ sudo pip3 install thefuck
 pip install thefuck
 echo 'eval $(thefuck --alias)' >> .bashrc
 
+# guake
+ sudo apt-get install -qyy guake
+
 # fisherman
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 fisher install z fzf
