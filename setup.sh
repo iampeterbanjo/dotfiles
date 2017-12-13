@@ -33,6 +33,8 @@ asdf plugin-add mongodb https://github.com/sylph01/asdf-mongodb.git
 # Imports Node.js release team's OpenPGP keys to main keyring
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+
 # thefuck
 sudo apt update
 sudo apt install python3-dev python3-pip
