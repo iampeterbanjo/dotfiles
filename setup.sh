@@ -29,6 +29,13 @@ mkdir -p ~/.config/fish/completions; and cp ~/.asdf/completions/asdf.fish ~/.con
 #### asdf mongodb 
 asdf plugin-add mongodb https://github.com/sylph01/asdf-mongodb.git
 
+#### nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+
+# in ~/.bashrc
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 ### asdf nodejs
 # Imports Node.js release team's OpenPGP keys to main keyring
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
