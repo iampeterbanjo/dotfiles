@@ -69,6 +69,12 @@ bash install.sh
 # nautilus - add open terminal here
 sudo apt-get install nautilus-open-terminal
 
+# gnome shell
+sudo apt-add-repository ppa:gnome3-team/gnome3
+sudo apt-add-repository ppa:gnome3-team/gnome3-staging
+sudo apt-get update
+sudo apt-get install gnome-shell
+
 # variables
 export PROJECTS=/media/iampeterbanjo/data/projects
 export GOROOT=$HOME/go
