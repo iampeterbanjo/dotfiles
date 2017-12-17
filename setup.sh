@@ -75,6 +75,9 @@ sudo apt-add-repository ppa:gnome3-team/gnome3-staging
 sudo apt-get update
 sudo apt-get install gnome-shell
 
+# gnome extensions for themes
+sudo apt-get install gnome-shell-extensions
+
 # variables
 export PROJECTS=/media/iampeterbanjo/data/projects
 export GOROOT=$HOME/go
