@@ -29,6 +29,11 @@ mkdir -p ~/.config/fish/completions; and cp ~/.asdf/completions/asdf.fish ~/.con
 #### asdf mongodb 
 asdf plugin-add mongodb https://github.com/sylph01/asdf-mongodb.git
 
+# python req
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev
+
 #### nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
