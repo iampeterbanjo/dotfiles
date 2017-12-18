@@ -78,6 +78,9 @@ sudo apt-get install gnome-shell
 # gnome extensions for themes
 sudo apt-get install gnome-shell-extensions
 
+# numix theme
+apt://numix-gtk-theme #open in browser
+
 # variables
 export PROJECTS=/media/iampeterbanjo/data/projects
 export GOROOT=$HOME/go
