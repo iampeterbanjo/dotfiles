@@ -81,6 +81,9 @@ sudo apt-get install gnome-shell-extensions
 # numix theme
 apt://numix-gtk-theme #open in browser
 
+# ark theme
+apt://arc-theme
+
 # variables
 export PROJECTS=/media/iampeterbanjo/data/projects
 export GOROOT=$HOME/go
