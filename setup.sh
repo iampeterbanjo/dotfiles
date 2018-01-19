@@ -41,12 +41,6 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | b
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
-### asdf nodejs
-# Imports Node.js release team's OpenPGP keys to main keyring
-bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-
-asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-
 # thefuck
 sudo apt update
 sudo apt install python3-dev python3-pip
