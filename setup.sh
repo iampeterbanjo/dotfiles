@@ -110,8 +110,8 @@ su - ${USER}
 sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
-# direnv
-sudo apt-get install direnv
+mkdir $HOME/bin
+mkdir $HOME/projects
 
 # variables
 export PROJECTS=$HOME/projects
@@ -120,10 +120,18 @@ export GOPATH=$(go env GOPATH)
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 export FISHERMAN=~/.local/share/fisherman
 
-# Go Google App Engine SDK
-echo >> 'export GAE_GO=$HOME/lib/go_appengine' >> ~/.bashrc
-echo >> 'export PATH=$GAE_GO:$PATH' >> ~/.bashrc
+# direnv
+sudo apt-get install direnv
 
+# shfmt
+go get -u mvdan.cc/sh/cmd/shfmt
+
+# xclip for micro
+sudo apt-get install xclip
+
+# micro
+curl https://getmic.ro | bash
+mv ./micro $HOME/bin
 
 # Resolve ENOSPC errors (lite-server, concurrently)
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
