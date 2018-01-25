@@ -26,8 +26,18 @@ echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 echo 'source ~/.asdf/asdf.fish' >> ~/.config/fish/config.fish
 mkdir -p ~/.config/fish/completions; and cp ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 
-#### asdf mongodb 
+#### asdf plugins
 asdf plugin-add mongodb https://github.com/sylph01/asdf-mongodb.git
+asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+
+asdf install golang 1.8.6
+asdf install mongodb latest
+asdf install elixir 1.6.0
+
+asdf global golang 1.8.6
+asdf global mongodb latest
+asdf global elixir 1.6.0
 
 # python req
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
@@ -36,10 +46,7 @@ xz-utils tk-dev
 
 #### nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
-
-# in ~/.bashrc
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+nvm install stable
 
 # thefuck
 sudo apt update
@@ -57,7 +64,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # fisherman
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
-fisher install z fzf
+fisher install z fzf upto
 
 # powerline fonts
 git clone https://github.com/powerline/fonts.git
@@ -75,16 +82,18 @@ sudo apt-get update
 sudo apt-get install gnome-shell
 
 # gnome extensions for themes
-sudo apt-get install gnome-shell-extensions
+# sudo apt-get install gnome-shell-extensions
 
 # numix theme
-apt://numix-gtk-theme #open in browser
+# apt://numix-gtk-theme #open in browser
 
 # ark theme
-apt://arc-theme
+# apt://arc-theme
 
 # Fira Code
-https://github.com/tonsky/FiraCode
+mkdir -p ~/.fonts/
+wget https://github.com/tonsky/FiraCode/raw/master/FiraCode-Regular.otf -O ~/.fonts/FiraCode-Regular.otf
+fc-cache -v
 
 # docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -101,22 +110,20 @@ su - ${USER}
 sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
+# direnv
+sudo apt-get install direnv
 
 # variables
-export PROJECTS=/media/iampeterbanjo/data/projects
-export GOROOT=$HOME/go
-export GOPATH=$PROJECTS/lib/golang
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-export FISHERMAN= ~/.local/share/fisherman
+echo >> 'export PROJECTS=$HOME/projects' >> ~/.bashrc
+echo >> 'export GOROOT=$HOME/go' >> ~/.bashrc
+echo >> 'export GOPATH=$HOME/lib/golang' >> ~/.bashrc
+echo >> 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bashrc
+echo >> 'export FISHERMAN= ~/.local/share/fisherman' >> ~/.bashrc
 
 # Go Google App Engine SDK
-export GAE_GO=$PROJECTS/lib/go_appengine
-export PATH=$GAE_GO:$PATH
+echo >> 'export GAE_GO=$HOME/lib/go_appengine' >> ~/.bashrc
+echo >> 'export PATH=$GAE_GO:$PATH' >> ~/.bashrc
 
-# dvorak keyboard at login
-sudo gedit /etc/mdm/Init/Default
-## before the last line `exit 0` add
-/usr/bin/setxkbmap dvorak
 
 # Resolve ENOSPC errors (lite-server, concurrently)
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
