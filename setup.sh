@@ -132,6 +132,10 @@ sudo apt-get install xclip
 # micro
 curl https://getmic.ro | bash
 mv ./micro $HOME/bin
+# micro plugins
+# plugin install fish
+# plugin install editorconfig
+# plugin install monokai-dark
 
 # Resolve ENOSPC errors (lite-server, concurrently)
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
