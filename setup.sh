@@ -114,11 +114,11 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo apt-get install direnv
 
 # variables
-echo >> 'export PROJECTS=$HOME/projects' >> ~/.bashrc
-echo >> 'export GOROOT=$HOME/go' >> ~/.bashrc
-echo >> 'export GOPATH=$HOME/lib/golang' >> ~/.bashrc
-echo >> 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bashrc
-echo >> 'export FISHERMAN= ~/.local/share/fisherman' >> ~/.bashrc
+export PROJECTS=$HOME/projects
+export GOROOT=$(go env GOROOT)
+export GOPATH=$(go env GOPATH)
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export FISHERMAN=~/.local/share/fisherman
 
 # Go Google App Engine SDK
 echo >> 'export GAE_GO=$HOME/lib/go_appengine' >> ~/.bashrc
