@@ -26,18 +26,20 @@ echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 echo 'source ~/.asdf/asdf.fish' >> ~/.config/fish/config.fish
 mkdir -p ~/.config/fish/completions; and cp ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 
-#### asdf plugins
+#### asdf mongodb
 asdf plugin-add mongodb https://github.com/sylph01/asdf-mongodb.git
-asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
-asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
-
-asdf install golang 1.8.6
 asdf install mongodb latest
-asdf install elixir 1.6.0
-
-asdf global golang 1.8.6
 asdf global mongodb latest
+
+#### asdf elixir
+asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+asdf install elixir 1.6.0
 asdf global elixir 1.6.0
+
+#### asdf golang
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+asdf install golang 1.8.6
+asdf global golang 1.8.6
 
 # python req
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
