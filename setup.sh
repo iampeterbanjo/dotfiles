@@ -1,4 +1,5 @@
 # setting up a new workstation
+# bash setup.sh
 
 ## git
 sudo add-apt-repository ppa:git-core/ppa -y
@@ -101,25 +102,10 @@ mkdir -p ~/.fonts/
 wget https://github.com/tonsky/FiraCode/raw/master/FiraCode-Regular.otf -O ~/.fonts/FiraCode-Regular.otf
 fc-cache -v
 
-# docker
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-sudo apt-get update
-sudo apt-get install -y docker-ce
-# check docker status
-sudo systemctl status docker
-# run docker without sudo
-sudo usermod -aG docker ${USER}
-su - ${USER}
-
-# docker-compose
-sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-
-# docker-machine
-curl -L https://github.com/docker/machine/releases/download/v0.13.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine && \
-chmod +x /tmp/docker-machine && \
-sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
+# update fish config
+mv ~/.config/fish ~/.config/fish_backup
+cd ~/.config/
+git clone git@bitbucket.org:iampeterbanjo/fish.git
 
 mkdir $HOME/bin
 mkdir $HOME/projects
@@ -150,3 +136,23 @@ mv ./micro $HOME/bin
 
 # Resolve ENOSPC errors (lite-server, concurrently)
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+# docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+sudo apt-get install -y docker-ce
+# check docker status
+sudo systemctl status docker
+# run docker without sudo
+sudo usermod -aG docker ${USER}
+su - ${USER}
+
+# docker-compose
+sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# docker-machine
+curl -L https://github.com/docker/machine/releases/download/v0.13.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine && \
+chmod +x /tmp/docker-machine && \
+sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
