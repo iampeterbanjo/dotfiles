@@ -70,7 +70,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # fisherman
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
-fisher install z fzf upto
+fisher install z fzf upto dartfish
 
 # powerline fonts
 cd ~/Downloads
@@ -133,6 +133,22 @@ mv ./micro $HOME/bin
 # plugin install fish
 # plugin install editorconfig
 # plugin install monokai-dark
+
+# vscode
+sudo add-apt-repository -y "deb https://packages.microsoft.com/repos/vscode stable main"
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EB3E94ADBE1229CF
+sudo apt update
+sudo apt install code
+
+# atom
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt update
+sudo apt install atom
+
+# sublime text 3
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt update
+sudo apt install sublime-text-installer
 
 # Resolve ENOSPC errors (lite-server, concurrently)
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
