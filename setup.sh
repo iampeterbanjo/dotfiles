@@ -11,6 +11,9 @@ sudo apt-add-repository ppa:fish-shell/release-2
 sudo apt-get update
 sudo apt-get install fish
 
+# clipboard manager
+sudo apt install clipit
+
 ## firefox nightly
 sudo add-apt-repository ppa:ubuntu-mozilla-daily/ppa
 sudo apt-get update
@@ -69,6 +72,7 @@ curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fishe
 fisher install z fzf upto
 
 # powerline fonts
+cd ~/Downloads
 git clone https://github.com/powerline/fonts.git
 cd fonts
 bash install.sh
