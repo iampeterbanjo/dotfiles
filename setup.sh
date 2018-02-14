@@ -111,11 +111,11 @@ mkdir $HOME/bin
 mkdir $HOME/projects
 
 # variables
-export PROJECTS=$HOME/projects
-export GOROOT=$(go env GOROOT)
-export GOPATH=$(go env GOPATH)
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-export FISHERMAN=~/.local/share/fisherman
+echo 'export PROJECTS=$HOME/projects' >> ~/.bashrc
+echo 'export GOROOT=$(go env GOROOT)' >> ~/.bashrc
+echo 'export GOPATH=$(go env GOPATH)' >> ~/.bashrc
+echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bashrc
+echo 'export FISHERMAN=~/.local/share/fisherman' >> ~/.bashrc
 
 # direnv
 sudo apt-get install direnv
