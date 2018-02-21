@@ -161,7 +161,8 @@ sudo apt-get install -y docker-ce
 # check docker status
 # sudo systemctl status docker
 # run docker without sudo
-sudo usermod -aG docker ${USER}
+sudo groupadd docker
+sudo usermod -aG docker $USER
 # su - ${USER}
 
 # docker-compose
