@@ -159,10 +159,10 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt-get update
 sudo apt-get install -y docker-ce
 # check docker status
-sudo systemctl status docker
+# sudo systemctl status docker
 # run docker without sudo
 sudo usermod -aG docker ${USER}
-su - ${USER}
+# su - ${USER}
 
 # docker-compose
 sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
