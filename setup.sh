@@ -48,7 +48,7 @@ asdf global golang 1.8.6
 # python req
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-xz-utils tk-dev
+xz-utils tk-dev python3-setuptools
 
 #### nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
