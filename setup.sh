@@ -177,3 +177,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 curl -L https://github.com/docker/machine/releases/download/v0.13.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine && \
 chmod +x /tmp/docker-machine && \
 sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
+
+# yarn
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install --no-install-recommends yarn
