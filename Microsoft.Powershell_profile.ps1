@@ -6,48 +6,53 @@ if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
 
-function gs() { git stats }
-function gemail() { git config --global user.email }
-function gname() { git config --global user.name }
-function ga() { git add -A }
-function gac() { git add -A; git commit -am }
-function guau() { git update-index --assume-unchanged }
-function gunu() { git update-index --no-assume-unchanged }
-function gbr() { git branch }
-function gbrso() { git branch --set-upstream-to=origin/(git rev-parse --abbrev-ref HEAD) }
+# SYSTEM
+function whoareyou () {
+  "i am $env:COMPUTERNAME"
+}
+
+function gits() { git stats }
+function gitemail() { git config --global user.email }
+function gitname() { git config --global user.name }
+function gita() { git add -A }
+function gitac() { git add -A; git commit -am $args }
+function gituau() { git update-index --assume-unchanged }
+function gitunu() { git update-index --no-assume-unchanged }
+function gitbr() { git branch }
+function gitbrso() { git branch --set-upstream-to=origin/(git rev-parse --abbrev-ref HEAD) }
 
 # checkout branches using fzf search
-function gbrco() { git branch | fzf | string trim | read -l result; and gco $result }
-function gm() { git commit --amend -m }
-function gc() { git commit -am }
-function gcl() { git clone }
-function gco() { git checkout }
-function gcob() { git checkout -br }
+function gitbrco() { git branch | fzf | string trim | read -l result; and gco $result }
+function gitm() { git commit --amend -m }
+function gitc() { git commit -am $args }
+function gitcl() { git clone $args }
+function gitco() { git checkout $args }
+function gitcob() { git checkout -br $args }
 # git restore file from last checkout
-function gcof() { git checkout -- }
-function gd() { git diff }
+function gitcof() { git checkout -- $args }
+function gitd() { git diff $args }
 # git log graph
-function gl() { git log --oneline }
-function glg() { git log --oneline --graph --all --decorate}
-function gmi() { git_branch_name | read -l result; and git checkout $1; and git pull; and git merge $result }
-function gp() { git push}
-function gpo() { git push -u origin(git rev-parse --abbrev-ref HEAD) }
-function gpl() { git pull}
-function gpom() { git push -u origin master }
-function grro() { git remote rm origin }
-function grao() { git remove add origin }
+function gitl() { git log --oneline }
+function gitlg() { git log --oneline --graph --all --decorate}
+function gitmi() { git_branch_name | read -l result; and git checkout $1; and git pull; and git merge $result }
+function gitp() { git push}
+function gitpo() { git push -u origin(git rev-parse --abbrev-ref HEAD) }
+function gitpl() { git pull}
+function gitpom() { git push -u origin master }
+function gitrro() { git remote rm origin }
+function gitrao() { git remove add origin }
 # reset to origin/undo git merge
-function gzmh() { git reset --hard ORIG_HEAD }
+function gitzmh() { git reset --hard ORIG_HEAD }
 # undo merge of commite using hash
-function gzmh() { git revert -m 1 }
+function gitzmh() { git revert -m 1 }
 # undo last commit
-function gzc() { git reset --soft HEAD^ }
+function gitzc() { git reset --soft HEAD^ }
 # redo last commit
-function gzzc() { git commit -a -c ORIG_HEAD }
-function gs() { git status }
-function gss() { git stash save }
-function gsl() { git stash list }
-function gcopages() { git checkout -b gh-pages }
-function gppages() { git push origin gh-pages }
-function gsyncpages() { git checkout gh-pages ; git merge master ; git checkout master ; git push --all }
-function gra() { git remote add }
+function gitzzc() { git commit -a -c ORIG_HEAD }
+function gits() { git status }
+function gitss() { git stash save }
+function gitsl() { git stash list }
+function gitcopages() { git checkout -b gh-pages }
+function gitppages() { git push origin gh-pages }
+function gitsyncpages() { git checkout gh-pages ; git merge master ; git checkout master ; git push --all }
+function gitra() { git remote add }
