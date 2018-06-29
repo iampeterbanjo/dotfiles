@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 mv ~/.config/fish ~/.config/fish_backup
 cd ~/.config/

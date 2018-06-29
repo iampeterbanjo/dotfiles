@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 sudo apt-add-repository ppa:gnome3-team/gnome3
 sudo apt-add-repository ppa:gnome3-team/gnome3-staging
