@@ -8,6 +8,14 @@ bin: ## Installs the bin directory files.
 		sudo ln -sf $$file /usr/local/bin/$$f; \
 	done
 
+.PHONY: clean
+clean: ## Installs the bin directory files.
+	# removing aliases for things in bin
+	for file in $(shell find $(CURDIR)/bin -type f -not -name "*-backlight" -not -name ".*.swp"); do \
+		f=$$(basename $$file); \
+		sudo unlink /usr/local/bin/$$f; \
+	done
+
 .PHONY: test
 test: shellcheck ## Runs all the tests on the files in the repository.
 

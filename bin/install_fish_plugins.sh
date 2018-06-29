@@ -1,4 +1,4 @@
-omf install z upto fzf trout
+fisher z upto fzf trout
 
 # install dependencies
 sudo apt install rbenv
