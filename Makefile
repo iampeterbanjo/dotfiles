@@ -5,7 +5,7 @@ bin: ## Installs the bin directory files.
 	# add aliases for things in bin
 	for file in $(shell find $(CURDIR)/bin -type f -not -name "*-backlight" -not -name ".*.swp"); do \
 		f=$$(basename $$file); \
-		sudo ln -sf $$file /usr/local/bin/$$f; \
+		chmod +x $$file; sudo ln -sf $$file /usr/local/bin/$$f; \
 	done
 
 .PHONY: clean
