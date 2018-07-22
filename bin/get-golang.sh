@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
-asdf install golang latest
-asdf global golang latest
+asdf install golang 1.10.3
+asdf global golang 1.10.3
 
 echo 'export GOROOT=$(go env GOROOT)' >> ~/.bashrc
 echo 'export GOPATH=$(go env GOPATH)' >> ~/.bashrc
