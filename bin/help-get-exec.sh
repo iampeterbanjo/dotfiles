@@ -20,11 +20,14 @@ help_get() {
   downloaded_file="$destination/$file"
 
   echo "moving $file to $install. Permission required"
-  if grep -q zip "$downloaded_file"; then
+  if [[ $file == *.zip ]]; then
     echo "unzipping to $install"
     sudo unzip "$downloaded_file" -d "$install"
-  else
+  elif [[ $file == *.gz ]]; then
     echo "extracting to $install"
     sudo tar -xvf "$downloaded_file" -C "$install"
+  else
+    echo "not an archived file"
+    sudo mv -v "$downloaded_file" "$install"
   fi
 }
