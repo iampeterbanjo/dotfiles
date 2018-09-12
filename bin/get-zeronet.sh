@@ -1,15 +1,21 @@
 #!/usr/bin/env bash
 
 baseUrl='https://github.com/HelloZeroNet/ZeroBundle/raw/master/dist'
-version='ZeroBundle-linux64.tar.gz'
-destination='$HOME/Downloads'
-install='/usr/local/bin'
+file='ZeroBundle-linux64.tar.gz'
+install="$HOME/programs"
 
-echo "getting $version"
+. ./bin/help-get-exec.sh
 
-wget "$baseUrl/$version" -N -P "$destination"
+help_get "$baseUrl" "$file" "$install"
 
-echo "moving $version to $install. Permission required"
-sudo tar -xvf "$destination/$version" -C "$install"
+if grep -q ZERONET "$HOME/.bashrc"; then
+  echo 'No update to PATH'
+else
+  echo 'Updating PATH'
+
+  echo 'export ZERONET=$HOME/programs/ZeroBundle' >> ~/.bashrc
+  echo 'export PATH=$ZERONET:$PATH' >> ~/.bashrc
+  echo '' >> ~/.bashrc
+fi
 
 echo "done"
