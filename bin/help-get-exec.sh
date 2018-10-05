@@ -19,13 +19,17 @@ help_get() {
   wget "$baseUrl/$file" -N -P "$destination"
   downloaded_file="$destination/$file"
 
-  echo "moving $file to $install. Permission required"
+  echo "moving $file to $install OR installing package. Permission required."
+
   if [[ $file == *.zip ]]; then
     echo "unzipping to $install"
     sudo unzip "$downloaded_file" -d "$install"
   elif [[ $file == *.gz ]]; then
     echo "extracting to $install"
     sudo tar -xvf "$downloaded_file" -C "$install"
+  elif [[ $file == *.deb ]]; then
+    echo "installing deb package"
+    sudo dpkg -i "$downloaded_file"
   else
     echo "not an archived file"
     sudo mv -v "$downloaded_file" "$install"
