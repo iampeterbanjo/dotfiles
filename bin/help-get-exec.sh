@@ -19,19 +19,48 @@ help_get() {
   wget "$baseUrl/$file" -N -P "$destination"
   downloaded_file="$destination/$file"
 
-  echo "moving $file to $install OR installing package. Permission required."
+  echo "$file download done"
 
   if [[ $file == *.zip ]]; then
     echo "unzipping to $install"
-    sudo unzip "$downloaded_file" -d "$install"
+    read -p "Are you sure? " -n 1 -r
+    echo    # (optional) move to a new line
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+      sudo unzip "$downloaded_file" -d "$install"
+    fi
   elif [[ $file == *.gz ]]; then
     echo "extracting to $install"
-    sudo tar -xvf "$downloaded_file" -C "$install"
+    read -p "Are you sure? " -n 1 -r
+    echo    # (optional) move to a new line
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+      sudo tar -xvf "$downloaded_file" -C "$install"
+    fi
   elif [[ $file == *.deb ]]; then
     echo "installing deb package"
-    sudo dpkg -i "$downloaded_file"
+    read -p "Are you sure? " -n 1 -r
+    echo    # (optional) move to a new line
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+      sudo dpkg -i "$downloaded_file"
+    fi
+  elif [[ $file == *.sh ]]; then
+    echo "make $downloaded_file executable and run"
+    read -p "Are you sure? " -n 1 -r
+    echo    # (optional) move to a new line
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+      chmod +x "$downloaded_file"
+      bash "$downloaded_file"
+    fi
   else
-    echo "not an archived file"
-    sudo mv -v "$downloaded_file" "$install"
+    echo "moving $downloaded_file to $install"
+    read -p "Are you sure? " -n 1 -r
+    echo    # (optional) move to a new line
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+      sudo mv -v "$downloaded_file" "$install"
+    fi
   fi
 }
