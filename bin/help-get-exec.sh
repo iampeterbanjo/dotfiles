@@ -29,7 +29,7 @@ help_get() {
     then
       sudo unzip "$downloaded_file" -d "$install"
     fi
-  elif [[ $file == *.gz ] || [ $file == *.tgz ]]; then
+  elif [ $file == *.gz ] || [ $file == *.tgz ]; then
     echo "extracting to $install"
     read -p "Are you sure? " -n 1 -r
     echo    # (optional) move to a new line
