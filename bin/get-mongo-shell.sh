@@ -18,6 +18,7 @@ if grep -q MONGO_SHELL "$HOME/.bashrc"; then
 else
   echo 'Updating PATH'
 
+  echo '' >> ~/.bashrc
   echo 'export MONGO_SHELL=$HOME/programs/mongodb-shell' >> ~/.bashrc
   echo 'export PATH=$MONGO_SHELL:$PATH' >> ~/.bashrc
   echo '' >> ~/.bashrc
