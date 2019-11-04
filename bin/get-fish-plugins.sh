@@ -1,5 +1,6 @@
-fisher z upto fzf trout
+fisher add jethrokuan/fzf
+fisher add jethrokuan/z
 
 # install dependencies
-sudo apt install rbenv
-sudo apt install direnv
+brew install rbenv
+brew install direnv
