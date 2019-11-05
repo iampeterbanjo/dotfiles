@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
-fisher fnm
-fnm latest
+fisher add jorgebucaran/fish-nvm
+nvm use lts
