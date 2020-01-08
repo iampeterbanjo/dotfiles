@@ -1,5 +1,10 @@
-fisher z upto fzf trout
+#!/usr/bin/env fish
+
+fisher add jethrokuan/fzf
+fisher add jethrokuan/z
+fisher add jorgebucaran/fish-nvm
+fisher add Markcial/upto
 
 # install dependencies
-sudo apt install rbenv
-sudo apt install direnv
+brew install rbenv
+brew install direnv
