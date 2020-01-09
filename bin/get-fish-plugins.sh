@@ -6,5 +6,4 @@ fisher add jorgebucaran/fish-nvm
 fisher add Markcial/upto
 
 # install dependencies
-brew install rbenv
-brew install direnv
+brew install rbenv direnv jq fzf
