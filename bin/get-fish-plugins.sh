@@ -2,7 +2,8 @@
 
 fisher add jethrokuan/fzf
 fisher add jethrokuan/z
-fisher add jorgebucaran/fish-nvm
+fisher add FabioAntunes/fish-nvm
+fisher add edc/bass
 fisher add Markcial/upto
 
 # install dependencies
