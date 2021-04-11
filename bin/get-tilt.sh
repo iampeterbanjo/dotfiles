@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
-# requires kubectl, ctlptl, tilt, microk8
-# PS: using latest tag doesn't work 2021-04-11
+# requires kubectl, ctlptl, tilt and kubernetes cluster e.g. microk8 or k3d
+cd "$(dirname "$0")"
 
 bash ./get-kubectl.sh
 
